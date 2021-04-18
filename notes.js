@@ -15,4 +15,21 @@ npm install react-bootstrap bootstrap (But we are not doing bootstrap instead we
 
 *For CDN
 open cdnjs and search cdn and paste in index.html
+
+Important JS: 
+{text && text}  instead of  {text ? text : ''}
+
+*defaultProps and propTypes
+
+This override if we pass prop 
+Rating.defaultProps = {
+  color: '#f8e825',
+};
+
+This is an internal machanism for checking type of propes and generate error is not matched
+Rating.propTypes = {
+  value: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+  color: PropTypes.number,
+};
 */
