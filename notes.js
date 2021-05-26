@@ -13,6 +13,10 @@ npx create-react-app frontend
 npm install react-bootstrap bootstrap (But we are not doing bootstrap instead we will use bootswatch free theme for 
                                         bootstrap customized bootstrap.min.css file to have different color or styles)
 
+(For react router) 
+npm install react-router-dom
+npm install react-router-bootstrap
+
 *For CDN
 open cdnjs and search cdn and paste in index.html
 
