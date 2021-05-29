@@ -36,4 +36,30 @@ Rating.propTypes = {
   text: PropTypes.string.isRequired,
   color: PropTypes.number,
 };
+
+Important Notes:
+
+1.
+Replaced <a> tag with <Link>
+<Link> tag use to='' instead of href=''
+Same we did for Navbar.Brand and Nav.Link
+Benefit:
+When replaced App doesn't reload while routing
+
+2.
+(Get product id from url and find in array of products)
+const product = products.find( p => p.id === match.params.id);
+
+3.
+(We can also use Button and then rap it in LinkContainer)
+<Link className='btn btn-light my-3' to='/'>Go Back</Link>
+
+4.
+Fluid:
+To stop image from coming out of container we have to pass in fluid inside <Image/>
+
+5.
+*Button Disable:
+we can disable button as               
+<Button className='btn-block' type='button' disable={product.countInStock === 0}>Add To Cart</Button>
 */
