@@ -17,6 +17,9 @@ npm install react-bootstrap bootstrap (But we are not doing bootstrap instead we
 npm install react-router-dom
 npm install react-router-bootstrap
 
+(For http request) we can use fetch api but it more powerful and easy
+npm install axios
+
 *For CDN
 open cdnjs and search cdn and paste in index.html
 
@@ -62,4 +65,20 @@ To stop image from coming out of container we have to pass in fluid inside <Imag
 *Button Disable:
 we can disable button as               
 <Button className='btn-block' type='button' disable={product.countInStock === 0}>Add To Cart</Button>
+
+*Fetching products from server:
+At this point we get 404 because it looking at 'localhost:3000/api/products' and have not added axios.get('localhost:5000/api/products')
+As frontend is running on 3000 when we do this we will get CROS error
+Solution:
+So we have to add a proxy that will look at localhost:5000 instead of localhost:3000
+Add this under name in package.json in frontend
+  "proxy": "http://127.0.0.1:5000",
+*/
+
+/*
+Backend:
+npm init
+entry point: server.js
+npm install express
+node server
 */
