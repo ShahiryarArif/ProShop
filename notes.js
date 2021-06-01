@@ -73,6 +73,40 @@ Solution:
 So we have to add a proxy that will look at localhost:5000 instead of localhost:3000
 Add this under name in package.json in frontend
   "proxy": "http://127.0.0.1:5000",
+
+*Nodemon && Concurrently Setup
+npm install -D nodemon concurrently
+nodemon: so we don't have to start server every time we update in server.js
+concurrently: use to run multiple npm scripts
+npm start --prefix frontend: this will enter frontend folder first then it will run npm start
+Changes in package.json:
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\"\"npm run client\""
+}
+
+*Enviroment Variables:
+install:
+npm install dotenv
+Create file as ".env"
+
+In server.js:
+const dotenv = require('dotenv');
+dotenv.config();
+
+Note:
+1. Restart server whenever you create new variable
+2. if .env have sensitive information then it should b in .gitignore
+
+*ES module in NodeJs:
+Two methods to use ES syntax:
+1. file ending with .mjs
+2. add {"type":"module"} in package.json
+
+Note: 
+When using ES syntax when importing files we have to append ".js"
 */
 
 /*

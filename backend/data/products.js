@@ -79,6 +79,6 @@ const products = [
   },
 ];
 
-// export default products;
+export default products;
 //As we are using commanJS systex
-module.exports = products;
+// module.exports = products;
