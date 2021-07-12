@@ -26,10 +26,12 @@ router.get(
     if (product) {
       res.json(product);
     } else {
-      res.status(404).json({ message: 'Product not found' });
+      /* res.status(404).json({ message: 'Product not found' });
+        Because we have custom error handler we will do like this
+      */
+      res.status(404); // If we donot write this it will be 500 by default
+      throw new Error('Product not found');
     }
-
-    res.json(product);
   })
 );
 
