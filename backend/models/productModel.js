@@ -50,7 +50,7 @@ const productSchema = mongoose.Schema(
       required: true,
     },
     reviews: [reviewSchema], //this is the array of review object and have a scheme its is small so we are putting in this file
-    ratting: {
+    rating: {
       type: Number,
       required: true,
       default: 0,
